@@ -1,14 +1,96 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+div.container, #streams {
+  margin-top: 20px;
+}
+.feedback{
+      position:fixed;
+      bottom: 10px;
+      color:black;
+      font-size: 12px;
+}
+    [class*='col-'] { 
+      padding-top:8px; 
+    }
+
+.thumb img.img-responsive { 
+      filter: none; /* IE6-9 */ 
+      -webkit-filter: grayscale(0); 
+      border-radius:5px; 
+      background-color: #fff; 
+      border: 1px solid #ddd; 
+     /*  padding:5px; */ 
+    } 
+
+  	div.thumb {
+  	  position: relative;
+  	}
+  	
+  	p.channelName {
+  		position: absolute;
+  		color: white;
+  		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  		bottom: 0px;
+  		left: 10px; 
+	  }
+.checkbox, .radio {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+	  
+    div.panel-body{
+      font-size: 12px;
+    }
+    
+  	img.boxart {
+  	  border-radius: 5px;
+  		border: 2px solid white;
+  		border-right: none;
+  		border-bottom: none;
+  		position: absolute;
+  		bottom: 0px;
+  		right: 0px;
+  		line-height: 0px;
+  	}
+  	
+.flowplayer.is-playing{
+  background-image:none !important;
+  background-color:#333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.flowplayer.is-playing, .flowplayer.is-paused, .flowplayer.is-fullscreen {
+  background-color: #000;
+}
+
+/*bootstrap grid 1-5 */
+@media (min-width: 992px) {
+  .col-md-1-5 { width: 20%; }
+  .col-md-2-5 { width: 40%; }
+  .col-md-3-5 { width: 60%; }
+  .col-md-4-5 { width: 80%; }
+  .col-md-5-5 { width: 100%; }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-1-5 { width: 20%; }
+  .col-lg-2-5 { width: 40%; }
+  .col-lg-3-5 { width: 60%; }
+  .col-lg-4-5 { width: 80%; }
+  .col-lg-5-5 { width: 100%; }
+}
+
+/* Demo only, no need for this */
+
+.show-grid [class^=col-] span,
+.container-fluid .show-grid [class^=col-] {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  text-align: center;
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+[class^=col-] {
+  /*margin-bottom: 30px;*/
 }
