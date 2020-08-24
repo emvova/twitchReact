@@ -41,9 +41,9 @@ class Body extends React.Component {
                                         id="search"
                                         className="form-control"
                                         placeholder="type game or channel"
-                                        autoFocus
-                                        onInput="search(this.value)"
-                                        onFocus="this.value=''"
+                                        //autoFocus
+                                        //onInput="search(this.value)"
+                                        //onFocus="this.value=''"
                                     />
                                 </div>
                             </div>
