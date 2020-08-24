@@ -32,7 +32,7 @@ class Body extends React.Component {
                                     <h2>Top Twitch Streams</h2>
                                 </div>
                             </div>
-                            <div id ="search" className="row sticky" style={{"padding-bottom": "20px"}}>
+                            <div id ="search" className="row sticky" style={{"paddingBottom": "20px"}}>
                                 <div className="col-md-6 col-md-offset-3 col-sm-4 col-sm-offset-4 col-xs-12 col-xs-offset-0">
                                     <input
                                         type="text"
