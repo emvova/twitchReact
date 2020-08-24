@@ -12,7 +12,7 @@ class Body extends React.Component {
                         <div className="panel panel-info">
                             <div
                             className="panel-heading"
-                            onclick="getStreams('https://api.twitch.tv/kraken/streams?limit=40&client_id=5umdahxg39d3df4xvs0vbmlmurd9xoc&language=ru%2Cen',true)"
+                            //onClick="getStreams('https://twitch-tv.glitch.me/api/kraken/streams?limit=40&client_id=5umdahxg39d3df4xvs0vbmlmurd9xoc&language=ru%2Cen',true)"
                             >
                             TopGames
                             </div>
@@ -39,9 +39,9 @@ class Body extends React.Component {
                                         id="search"
                                         className="form-control"
                                         placeholder="type game or channel"
-                                        autofocus
-                                        oninput="search(this.value)"
-                                        onfocus="this.value=''"
+                                        autoFocus
+                                        onInput="search(this.value)"
+                                        onFocus="this.value=''"
                                     />
                                 </div>
                             </div>
@@ -125,7 +125,7 @@ class App extends React.Component {
       error: null,
       isLoaded: false,
       items: [],
-      url: 'https://api.twitch.tv/kraken/streams?limit=40',
+      url: 'https://twitch-tv.glitch.me/api/kraken/streams?limit=40',
       pageNo: 1,
       displayCount: 5,
       noMoreData: false
