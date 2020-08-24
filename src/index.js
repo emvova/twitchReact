@@ -138,7 +138,6 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    offset+=40;
     this.fetchData();
   }
 
@@ -165,6 +164,7 @@ class App extends React.Component {
               url: 'https://twitch-tv.glitch.me/api/kraken/streams?limit='+limit+'&offset='+offset,
               pageNo: pageNo + 1
               });
+              offset+=limit;
           },
           // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
           // чтобы не перехватывать исключения из ошибок в самих компонентах.
