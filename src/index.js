@@ -104,12 +104,13 @@ class Thumb extends React.Component{
                 <p className="channelName">
                     <a
                     style={{ color: "white" }}
+                    target="_blank"
                     href={"http://twitch-tv.glitch.me/player_new/"+this.props.channel_name}
                     >
                     {this.props.display_name}
                     </a>
-                    <br />                    target="_blank"
-                    rel="noopener noreferrer"
+                    <br />                    
+
                     {this.props.viewers/1000}
 
                 </p>
@@ -160,7 +161,7 @@ class App extends React.Component {
               this.setState({
               isLoaded: true,
               items: [ ...items, ...result.streams ],
-              url: 'https://twitch-tv.glitch.me/api/kraken/streams?limit=4'+limit+'&offset='+offset,
+              url: 'https://twitch-tv.glitch.me/api/kraken/streams?limit='+limit+'&offset='+offset,
               pageNo: pageNo + 1
               });
           },
