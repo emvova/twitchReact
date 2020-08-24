@@ -134,6 +134,7 @@ class App extends React.Component {
       displayCount: 5,
       noMoreData: false
     };
+    offset+=limit;
     this.fetchData = this.fetchData.bind(this);
   }
 
