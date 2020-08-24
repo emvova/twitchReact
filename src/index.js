@@ -105,6 +105,7 @@ class Thumb extends React.Component{
                     <a
                     style={{ color: "white" }}
                     target="_blank"
+                    rel="noopener noreferrer"
                     href={"http://twitch-tv.glitch.me/player_new/"+this.props.channel_name}
                     >
                     {this.props.display_name}
