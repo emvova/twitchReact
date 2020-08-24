@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import InfiniteScroll from "react-infinite-scroll-component";
 import './index.css';
+var limit = 40;
+var offset=0;
 
 class Body extends React.Component {
     render() {
@@ -102,14 +104,14 @@ class Thumb extends React.Component{
                 <p className="channelName">
                     <a
                     style={{ color: "white" }}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     href={"http://twitch-tv.glitch.me/player_new/"+this.props.channel_name}
                     >
                     {this.props.display_name}
                     </a>
-                    <br />
+                    <br />                    target="_blank"
+                    rel="noopener noreferrer"
                     {this.props.viewers/1000}
+
                 </p>
         </div>
         )
@@ -125,7 +127,7 @@ class App extends React.Component {
       error: null,
       isLoaded: false,
       items: [],
-      url: 'https://twitch-tv.glitch.me/api/kraken/streams?limit=40',
+      url: 'https://twitch-tv.glitch.me/api/kraken/streams?limit='+limit,
       pageNo: 1,
       displayCount: 5,
       noMoreData: false
@@ -134,6 +136,7 @@ class App extends React.Component {
   }
 
   componentWillMount() {
+    offset+=40;
     this.fetchData();
   }
 
@@ -157,7 +160,7 @@ class App extends React.Component {
               this.setState({
               isLoaded: true,
               items: [ ...items, ...result.streams ],
-              url: result._links.next,
+              url: 'https://twitch-tv.glitch.me/api/kraken/streams?limit=4'+limit+'&offset='+offset,
               pageNo: pageNo + 1
               });
           },
